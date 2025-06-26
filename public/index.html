@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="sidebar">
+      <h2>💬 Chat Room</h2>
+      <div class="online-count">🟢 <span id="user-count">0</span> online</div>
+      <div id="user-list" class="user-list"></div>
+    </div>
+
+    <div class="chat-area">
+      <div id="messages" class="messages"></div>
+      <div id="typing" class="typing-indicator"></div>
+      <form id="chat-form" class="chat-form">
+        <input type="text" id="msg" autocomplete="off" placeholder="Type a message..." />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
